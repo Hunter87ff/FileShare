@@ -1,3 +1,1 @@
-
-import main
-app = main.app
+print("Hunter87")
