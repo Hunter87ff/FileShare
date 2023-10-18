@@ -1,6 +1,7 @@
-<html><head><style type="text/css">
-	@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
-
+<html>
+<head>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 .frame {
 	position: absolute;
 	top: 50%;
@@ -95,20 +96,17 @@ h1 {
 
 <div class="frame">
 	<div class="center">
-		<div class="title">
-			<h1>Drop file to upload</h1>
-		</div>
-		<form action="/fsend" method="POST" enctype="multipart/form-data">
-		<div class="dropzone">
-			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon">
-			<input type="file" name="file" class="upload-input">
-		</div>
-		<button style="z-index: 1;" type="submit" class="btn">Send File</button>
-		</form>
-	
+	<div class="title">
+	<h1>Drop file to upload</h1>
+	</div>
+	<form action="/fsend" method="POST" enctype="multipart/form-data">
+	<div class="dropzone">
+	<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon">
+	<input type="file" name="file" class="upload-input">
+	</div>
+	<button style="z-index: 1;" type="submit" class="btn">Send File</button>
+	</form>
 	</div>
 </div>
-
-
-
-</body><!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  --><!-- NO JS ADDED YET --></html>
+</body>
+</html>
