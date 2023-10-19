@@ -1,4 +1,4 @@
-name: Syntax Checking
+name: Testing
 
 on:
   push:
