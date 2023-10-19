@@ -20,14 +20,17 @@ def upload():
 def upload_file():
     data = request.form.to_dict()
     print(data)
-    file = request.files.get('file').read()
+    file = request.files['file']
 
-    fn = str(request.files.get('file').filename)
+    fn = os.path.join("D:/github/FileShare/src/files/", file.filename)
     print(fn)
-    with open(fn, "wb") as f:
-        f.write(file)
+    try:
+        with open(fn, "wb") as f:
+            f.write(file.read())
+    except IOError as e:
+        return f"Error saving file: {e}"
     return "<script>alert('uploaded'); window.location.href='/'</script>"
     return "<script>alert('uploaded')</script>"
 
 #os.system("start chrome http://localhost:8787")
-app.run(host="0.0.0.0", port=8787)
+app.run(host="0.0.0.0", port=8787, debug=True)
