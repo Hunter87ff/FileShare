@@ -23,11 +23,11 @@ def upload_file():
     file = request.files['file']  #this is the file
     fn = os.path.join("D:/github/FileShare/src/files/", file.filename)  #change the file path to your file path
     try:
-        with open(fn, "wb") as f:
+        with open(file.filename, "wb") as f:
             f.write(file.read())   #write and save the file
     except IOError as e:
         return "<script>alert('Unable to upload file, Try again!!'); window.location.href='/'</script>"  #error handelling for file saving
     return "<script>alert('uploaded'); window.location.href='/'</script>"  
 
-#os.system("start chrome http://localhost:8787")  
-app.run(host="0.0.0.0", port=8787, debug=True)  #disable the debugger if you want
+os.system("start chrome http://localhost:8080")  
+app.run(host="0.0.0.0", port=8080, debug=True)  #disable the debugger if you want
