@@ -22,12 +22,12 @@
 	</div>
 </div>
 <div class="progress-container" style="width: 50%;margin: 10px auto; ">
-<div style="display:none; width: 0;height: 20px;background-color: #4CAF50;" class="progress-bar" id="myProgressBar"></div>
+<div style="display:none; width: 0;height: 20px;background-color: #4CAF50;" class="progress-bar" id="progressbr"></div>
 </div>
 <script>
 function sel(obj){return document.querySelector(obj);}
 function loader(percentage) {
-    const progressBar = sel('#myProgressBar');
+    const progressBar = sel('#progressbr');
     progressBar.style.width = percentage + '%';
     sel(".btn").innerText = "Uploaded " + percentage + '%';}
 const fileInput = sel('.upload-input');
