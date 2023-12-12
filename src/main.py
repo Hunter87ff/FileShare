@@ -2,7 +2,7 @@ import flask, os
 from flask import Flask, request, render_template
 
 app = Flask("FileShare")
-
+app.static_folder = "static"
 
 @app.route("/")
 def upload():
