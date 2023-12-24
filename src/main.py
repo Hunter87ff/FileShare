@@ -1,5 +1,8 @@
-import flask, os
-from flask import Flask, request, render_template
+try:
+    import flask, os
+    from flask import Flask, request, render_template
+except:
+    os.system("pip install -r requirements.txt")
 
 app = Flask("FileShare")
 app.static_folder = "static"
