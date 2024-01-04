@@ -7,6 +7,6 @@ WORKDIR /app
 COPY . /app
 # Install the application dependencies
 RUN pip install -r src/requirements.txt
-EXPOSE 8787/http
+EXPOSE 80 8080
 # Define the entry point for the container
 CMD ["python", "runner.py"]
