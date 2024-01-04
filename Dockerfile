@@ -2,13 +2,13 @@
 FROM python:3.9
 
 # Set the working directory in the container
-WORKDIR /
+WORKDIR /src
 
 # Copy the application files into the working directory
 COPY . /src
 
 # Install the application dependencies
-RUN pip install -r src/requirements.txt
+RUN pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["python", "runner.py"]
+CMD ["python", "main.py"]
