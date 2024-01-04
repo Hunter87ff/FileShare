@@ -11,4 +11,4 @@ COPY . /src
 RUN pip install flask
 
 # Define the entry point for the container
-CMD ["python", "main.py"]
+CMD ["python", "runner.py"]
