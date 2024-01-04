@@ -8,7 +8,7 @@ WORKDIR /src
 COPY . /src
 
 # Install the application dependencies
-RUN pip install -r requirements.txt
+RUN pip install flask
 
 # Define the entry point for the container
 CMD ["python", "main.py"]
