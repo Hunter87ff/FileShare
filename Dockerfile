@@ -8,7 +8,7 @@ WORKDIR /
 COPY ./
 
 # Install the application dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r src/requirements.txt
 
 # Define the entry point for the container
 CMD ["python", "runner.py"]
