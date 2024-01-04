@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /
 
 # Copy the application files into the working directory
-COPY ./
+COPY . /src
 
 # Install the application dependencies
 RUN pip install -r src/requirements.txt
