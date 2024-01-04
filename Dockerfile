@@ -2,13 +2,13 @@
 FROM python:3.9
 
 # Set the working directory in the container
-WORKDIR /src
+WORKDIR /app
 
 # Copy the application files into the working directory
-COPY . /src
+COPY . /app
 
 # Install the application dependencies
-RUN pip install flask
+RUN pip install -r src/requirements.txt
 
 # Define the entry point for the container
 CMD ["python", "runner.py"]
