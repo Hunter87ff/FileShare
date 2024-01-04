@@ -9,4 +9,4 @@ COPY . /app
 RUN pip install -r src/requirements.txt
 EXPOSE 8080
 # Define the entry point for the container
-CMD ["python", "runner.py"]
+CMD ["python", "src/main.py"]
