@@ -33,4 +33,5 @@ def upload_file():
     return "<script>alert('uploaded'); window.location.href='/'</script>"  
 
 #os.system("start chrome http://localhost:8080")  
-app.run(host="0.0.0.0", port=8781)  #disable the debugger if you want
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8781)  #disable the debugger if you want
