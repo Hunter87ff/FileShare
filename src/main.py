@@ -34,4 +34,4 @@ def upload_file():
 
 #os.system("start chrome http://localhost:8080")  
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8781)  #disable the debugger if you want
+    app.run(host="0.0.0.0", port=8080)  #disable the debugger if you want
