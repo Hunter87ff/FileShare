@@ -6,7 +6,7 @@ WORKDIR /app
 # Copy the application files into the working directory
 COPY . /app
 # Install the application dependencies
-RUN pip install -r src/requirements.txt
+RUN pip install -r requirements.txt
 EXPOSE 8087
 # Define the entry point for the container
-CMD ["python", "src/main.py"]
+CMD ["python", "main.py"]
