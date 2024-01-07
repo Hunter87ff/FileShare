@@ -9,8 +9,8 @@ app.static_folder = "static"
 
 @app.route("/")
 def upload():
-    return render_template("form.html")
-    return """
+    try:return render_template("form.html")
+    except:return """
     <form action="/fsend" method="POST" enctype="multipart/form-data">
   <input type="file" name="file">
   <input type="submit" value="Upload">
@@ -23,7 +23,7 @@ def upload():
 def upload_file():
     # data = request.form.to_dict()
     # print(data)
-    file = request.files['file']  #this is the file
+    file = request.files['file']  
     fn = os.path.join("D:/github/FileShare/src/files/", file.filename)  #change the file path to your file path
     try:
         with open(file.filename, "wb") as f:
@@ -32,6 +32,6 @@ def upload_file():
         return "<script>alert('Unable to upload file, Try again!!'); window.location.href='/'</script>"  #error handelling for file saving
     return f"<script>alert('uploaded'); window.location.href='/'</script>"  
 
-#os.system("start chrome http://localhost:8080")  
+
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080)  #disable the debugger if you want
+    app.run(host="0.0.0.0", port=8080)
