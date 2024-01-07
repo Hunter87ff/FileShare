@@ -9,4 +9,5 @@ COPY . /app
 RUN pip install -r requirements.txt
 EXPOSE 80
 # Define the entry point for the container
-CMD ["python", "main.py"]
+# CMD ["python", "main.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:app"]
