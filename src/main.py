@@ -3,7 +3,7 @@ try:
     from flask import Flask, request, render_template
 except:
     os.system("pip install -r requirements.txt")
-
+print(os.environ["V1"])
 app = Flask("FileShare")
 app.static_folder = "static"
 
