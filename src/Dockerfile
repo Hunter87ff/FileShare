@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . /app
 # Install the application dependencies
 RUN pip install -r requirements.txt
-EXPOSE 80
+EXPOSE 8080
 # Define the entry point for the container
 # CMD ["python", "main.py"]
 CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:app"]
