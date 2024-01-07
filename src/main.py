@@ -3,7 +3,7 @@ try:
     from flask import Flask, request, render_template
 except:
     os.system("pip install -r requirements.txt")
-print(os.environ["V1"])
+
 app = Flask("FileShare")
 app.static_folder = "static"
 
@@ -30,7 +30,7 @@ def upload_file():
             f.write(file.read())   #write and save the file
     except IOError as e:
         return "<script>alert('Unable to upload file, Try again!!'); window.location.href='/'</script>"  #error handelling for file saving
-    return f"<script>alert('uploaded'); window.location.href='/?v1={os.environ['V1']}</script>"  
+    return f"<script>alert('uploaded'); window.location.href='/'</script>"  
 
 #os.system("start chrome http://localhost:8080")  
 if __name__ == '__main__':
