@@ -30,7 +30,7 @@ def upload_file():
             f.write(file.read())   #write and save the file
     except IOError as e:
         return "<script>alert('Unable to upload file, Try again!!'); window.location.href='/'</script>"  #error handelling for file saving
-    return "<script>alert('uploaded'); window.location.href='/'</script>"  
+    return f"<script>alert('uploaded'); window.location.href='/?v1={os.environ['V1']}</script>"  
 
 #os.system("start chrome http://localhost:8080")  
 if __name__ == '__main__':
