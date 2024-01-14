@@ -22,8 +22,11 @@ def upload():
 @app.route('/fsend', methods=['POST'])
 def upload_file():
     # data = request.form.to_dict()
-    file = request.files['file']  
-    fn = os.path.join(os.environ["USERPROFILE"]+r"\Downloads", file.filename)  #file path config is configured for windows. change it based on your os.
+    file = request.files['file']
+    fn = ""
+    if "win" in os.sys.platform:
+        fn = os.path.join(os.environ["USERPROFILE"]+r"\Downloads", file.filename)  #file path config is configured for windows. change it based on your os.
+    else: fn = file.filename
     try:
         with open(fn, "wb") as f:
             f.write(file.read())   #write and save the file
