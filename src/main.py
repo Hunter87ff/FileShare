@@ -24,9 +24,9 @@ def upload_file():
     # data = request.form.to_dict()
     # print(data)
     file = request.files['file']  
-    fn = os.path.join("D:/github/FileShare/src/files/", file.filename)  #change the file path to your file path
+    fn = os.path.join(os.environ["USERPROFILE"]+r"\Downloads", file.filename)  #change the file path to your file path
     try:
-        with open(file.filename, "wb") as f:
+        with open(fn, "wb") as f:
             f.write(file.read())   #write and save the file
     except IOError as e:
         return "<script>alert('Unable to upload file, Try again!!'); window.location.href='/'</script>"  #error handelling for file saving
