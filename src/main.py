@@ -17,13 +17,7 @@ except:
 
 
 cur_dir = os.path.dirname(__file__)
-os.chdir(cur_dir) # change working directory
-
-#print(os.system("dir")) #to see the current working directory, it should be the path to the file
-
-for i in os.listdir("static/img"):
-    print(i)
-
+os.chdir(cur_dir)
 
 
 def local_ip():
