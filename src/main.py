@@ -9,11 +9,9 @@ blue='\033[34m'
 NC='\033[0m'
 
 
-try:
-    import flask, socket, os, qrcode, webview,threading
-    from flask import Flask, request, render_template, redirect
-except:
-    os.system("pip install -r requirements.txt")
+
+import flask, socket, os, qrcode, webview,threading
+from flask import Flask, request, render_template, redirect
 
 
 #cur_dir = os.path.dirname(__file__)
