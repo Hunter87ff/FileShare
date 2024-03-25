@@ -16,8 +16,8 @@ except:
     os.system("pip install -r requirements.txt")
 
 
-cur_dir = os.path.dirname(__file__)
-os.chdir(cur_dir)
+#cur_dir = os.path.dirname(__file__)
+#os.chdir(cur_dir)
 
 
 def local_ip():
