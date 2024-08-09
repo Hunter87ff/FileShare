@@ -30,6 +30,10 @@ def local_ip():
 
 app = Flask("FileShare", static_folder = "static")
 
+@app.errorhandler(504)
+def server_error(e):
+    return redirect("/upload")
+
 @app.errorhandler(404)
 def page_not_found(e):
     return redirect("/upload")
