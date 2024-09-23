@@ -75,7 +75,7 @@ url = f"{lgr}URL to send file : {red}http://{local_ip()}:8787{NC}"
 if "win" in os.sys.platform:
     url = f"URL to send file : http://{local_ip()}:8787"
     qr = qrcode.QRCode(version=1,error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=10,border=4,)
-    data = f"{local_ip()}:8787/upload"
+    data = f"http://{local_ip()}:8787/upload"
     qr.add_data(data)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
