@@ -25,4 +25,4 @@ python3 main.py #for linux
 - Displays the QR code and removes the temporary file.
 
 ## Note 
-tkinter may work properly with linux. in that case you won't get any qr code popup, instead you'll get the local address in the terminal. just you have to open that url into the device, from which the data will be shared.
+tkinter might not work properly with linux. in that case you won't get any qr code popup, instead you'll get the local address in the terminal. just you have to open that url into the other device, from which the data will be shared.
