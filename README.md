@@ -3,7 +3,7 @@
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![Tested on Windows](https://img.shields.io/badge/Tested%20on-Windows|linux|Android-brightgreen.svg)](https://www.microsoft.com/windows/)
 
-This Python project provides a simple file-sharing application over a local network using Flask. Users can upload files through a web interface and receive a URL for downloading the uploaded files. The application generates a QR code for easy access to the file-sharing URL.
+This Python project provides a simple file-sharing application over a local network using Flask. Users can upload files through a web interface. The application generates a QR code for easy access to the file-sharing URL.
 
 ## Installation 
 ```bash
